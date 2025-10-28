@@ -1,0 +1,259 @@
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background-color: black;
+  padding: 20px 20px 60px;
+}
+
+.hero-container {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 1fr 0.3fr;
+  gap: 60px;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+}
+
+.hero-content {
+  max-width: 700px;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 0.95;
+  margin-bottom: 30px;
+  background: linear-gradient(135deg, #3b82f6 0%, #B865D6 20%, #E91E8C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -2px;
+}
+
+.hero-tagline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.hero-tagline-1 {
+  color: #3b82f6;
+}
+
+.hero-tagline-2 {
+  color: #E91E8C;
+}
+
+.hero-tagline-3 {
+  color: #B865D6;
+}
+
+.hero-tagline .dot {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.register-button {
+  background: linear-gradient(135deg, #5B21B6 0%, #7C3AED 100%);
+  border: 2px solid #8B5CF6;
+  padding: 16px 48px;
+  border-radius: 8px;
+  color: white;
+  font-weight: 700;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: 0 0 30px rgba(138, 92, 246, 0.148);
+  transition: all 0.3s ease;
+  display: inline-block;
+  margin-bottom: 40px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.register-button:hover {
+  box-shadow: 0 0 50px rgba(138, 92, 246, 0.326);
+  transform: translateY(-2px);
+  border-color: #A78BFA;
+}
+
+.hero-description {
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.hero-description strong {
+  background: linear-gradient(135deg, #B865D6 0%, #E91E8C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+}
+
+.hero-visual {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1500px;
+}
+
+.hero-visual img {
+  width: 100%;
+  width: 400px;
+  height: auto;
+  object-fit: contain;
+}
+
+.hero-institute {
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 100;
+  line-height: 1.6;
+  text-align: center;
+  max-width: 1400px;
+  width: 100%;
+  margin-top: 0px;
+  position: relative;
+  z-index: 10;
+}
+
+.binary-rain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.binary-column {
+  position: absolute;
+  color: #66deff;
+  font-family: 'Courier New', monospace;
+  font-size: 16px;
+  line-height: 1.5;
+  animation: fallDown linear infinite;
+  text-shadow: 0 0 10px #66deff;
+  white-space: pre;
+}
+
+@keyframes fallDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 4rem;
+  }
+
+  .hero-tagline {
+    justify-content: center;
+  }
+
+  .hero-visual img {
+    max-width: 450px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 80px 20px 40px;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .hero-container {
+    padding: 20px;
+    gap: 30px;
+  }
+
+  .hero-tagline {
+    font-size: 0.9rem;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .hero-description {
+    font-size: 0.9rem;
+  }
+
+  .hero-description br {
+    display: none;
+  }
+
+  .register-button {
+    padding: 14px 36px;
+    font-size: 0.9rem;
+  }
+
+  .hero-visual img {
+    max-width: 350px;
+  }
+
+  .hero-institute {
+    font-size: 0.75rem;
+    margin-top: 30px;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-tagline {
+    font-size: 0.8rem;
+  }
+
+  .hero-visual img {
+    max-width: 280px;
+  }
+}

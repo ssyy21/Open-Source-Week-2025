@@ -1,0 +1,27 @@
+.App {
+  min-height: 100vh;
+  background: #000;
+}
+
+.footer {
+  border-top: 1px solid #1F2937;
+  padding: 60px 20px;
+  text-align: center;
+  background: #000;
+}
+
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.footer-text {
+  color: #6B7280;
+  margin-bottom: 16px;
+  font-size: 0.95rem;
+}
+
+.footer-institute {
+  color: #4B5563;
+  font-size: 0.875rem;
+}
