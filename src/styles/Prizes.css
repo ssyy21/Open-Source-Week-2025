@@ -132,7 +132,7 @@
   }
 
   .card {
-    margin-top: 50px;
+    margin-top: 20px;
   }
 
   .trophy {
@@ -194,7 +194,7 @@
 @media (max-width: 480px) {
   .prizes .heading {
     font-size: 2.5rem;
-    margin-bottom: 60px;
+    margin-bottom: 0px;
   }
 
   .card {
