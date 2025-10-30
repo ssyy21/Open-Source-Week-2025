@@ -3,7 +3,7 @@ import React from 'react';
 import Hero from './components/Hero';
 import About from './components/About';
 // import Themes from './components/Themes';
-// import Prizes from './components/Prizes';
+import Prizes from './components/Prizes';
 import './App.css';
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
       <Hero />
       <About />
       {/* <Themes /> */}
-      {/* <Prizes /> */}
+      <Prizes />
       <footer className="footer">
         <div className="footer-container">
           <p className="footer-text">This is the footer.</p>
