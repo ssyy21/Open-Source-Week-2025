@@ -5,6 +5,10 @@ import About from './components/About';
 import Themes from './components/Themes';
 import Prizes from './components/Prizes';
 import './App.css';
+import Footer from "./components/Footer";
+import Timeline from "./components/Timeline";
+import Speakers from "./components/Speakers";
+import FAQ from "./components/FAQ";
 
 function App() {
   return (
@@ -13,12 +17,20 @@ function App() {
       <Hero />
       <About />
       <Themes />
-      <Prizes />
-      <footer className="footer">
-        <div className="footer-container">
-          <p className="footer-text">This is the footer.</p>
-        </div>
-      </footer>
+
+<main>
+  <Prizes />
+  <Speakers />
+  <Timeline />
+  <FAQ />
+
+  <footer className="footer">
+    <div className="footer-container">
+      <p className="footer-text">This is the footer.</p>
+    </div>
+  </footer>
+</main>
+
     </div>
   );
 }
