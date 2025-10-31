@@ -2,7 +2,7 @@ import React from 'react';
 // import Navbar from './components/Navbar/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
-// import Themes from './components/Themes';
+import Themes from './components/Themes';
 import Prizes from './components/Prizes';
 import './App.css';
 import Footer from "./components/Footer";
@@ -16,7 +16,7 @@ function App() {
       {/* <Navbar /> */}
       <Hero />
       <About />
-      {/* <Themes /> */}
+      <Themes />
 
 <main>
   <Prizes />
