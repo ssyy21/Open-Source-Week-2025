@@ -1,9 +1,9 @@
 import React from 'react';
 // import Navbar from './components/Navbar/Navbar';
 import Hero from './components/Hero';
-// import About from './components/About';
+import About from './components/About';
 // import Themes from './components/Themes';
-// import Prizes from './components/Prizes';
+import Prizes from './components/Prizes';
 import './App.css';
 import Footer from "./components/Footer";
 import Timeline from "./components/Timeline";
@@ -15,13 +15,22 @@ function App() {
     <div className="App">
       {/* <Navbar /> */}
       <Hero />
-      {/* <About /> */}
+      <About />
       {/* <Themes /> */}
-      {/* <Prizes /> */}
-      <Speakers />
-      <Timeline />
-      <FAQ />
-      <Footer />
+
+<main>
+  <Prizes />
+  <Speakers />
+  <Timeline />
+  <FAQ />
+
+  <footer className="footer">
+    <div className="footer-container">
+      <p className="footer-text">This is the footer.</p>
+    </div>
+  </footer>
+</main>
+
     </div>
   );
 }
