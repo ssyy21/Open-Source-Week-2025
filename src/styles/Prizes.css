@@ -15,14 +15,15 @@
 }
 
 .prizes .heading {
-  font-size: 4rem;
+  font-size: 5rem;
   font-weight: 600;
   text-align: center;
   margin-bottom: 50px;
-  background: linear-gradient(105deg, #E91E8C 0%, #85c8ff 100%);
+  background: linear-gradient(105deg, #e2a3c6 0%, #d8dfe5 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .cards-wrapper {
@@ -47,17 +48,7 @@
   margin-top: 0px;
 }
 
-.gold {
-  background: linear-gradient(180deg, #FFED4E 0%, #FFED4E 40%, #D4AF37 100%);
-}
 
-.silver {
-  background: linear-gradient(180deg, #F5F5F5 0%, #E8E8E8 40%, #A8A8A8 100%);
-}
-
-.bronze {
-  background: linear-gradient(180deg, #FFB6C1 0%, #ffb6c1 40%, #de5d70 100%);
-}
 
 .trophy {
   position: absolute;
@@ -223,3 +214,85 @@
   .desc {
     font-size: 0.85rem;
   }}
+
+  /* Smooth fade-up animation when the section loads */
+.card {
+
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 0.8s ease forwards;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+/* Delay entry for each card */
+.card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+/* Hover transition */
+.card:hover {
+  transform: translateY(-12px) scale(1.05);
+  box-shadow: 0 0 30px rgba(174, 0, 255, 0.4);
+}
+
+/* Optional: Trophy image animation on hover */
+.card:hover .trophy-img {
+  transform: rotate(-10deg) scale(1.1);
+  transition: transform 0.4s ease;
+}
+
+/* Fade-up keyframes */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.card {
+  border-radius: 20px;
+  padding: 30px;
+  text-align: center;
+  transition: all 0.4s ease-in-out;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.05);
+}
+.gold {
+  background: linear-gradient(180deg, #FFED4E 0%, #FFED4E 40%, #D4AF37 100%);
+}
+
+.silver {
+  background: linear-gradient(180deg, #F5F5F5 0%, #E8E8E8 40%, #A8A8A8 100%);
+}
+
+.bronze {
+  background: linear-gradient(180deg, #FFB6C1 0%, #ffb6c1 40%, #de5d70 100%);
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px rgba(255, 0, 255, 0.3);
+  border: 1px solid rgba(255, 0, 255, 0.4);
+}
+
+.trophy-img {
+  height: 150px;
+  width: auto;
+  transition: transform 0.4s ease-in-out;
+}
+
+.card:hover .trophy-img {
+  transform: scale(1.05);
+}

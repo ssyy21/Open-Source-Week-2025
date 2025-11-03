@@ -13,7 +13,7 @@ const About=()=>{
               </h2>
               <div className="about-block">
                 <p className="about-description">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate rem magnam soluta quae, eos modi voluptates non sint ipsam odit placeat enim aspernatur saepe vitae nemo libero tempore minus quasi.
+                  Open Source Week is a one-week celebration of collaboration, learning, and innovation. It brings together developers, designers, and enthusiasts through engaging workshops, inspiring speaker sessions, and hands-on projects — all aimed at empowering participants to explore, contribute to, and grow within the world of open source development.
                 </p>
                 <div className="about-features">
                   <div className="feature-item">
@@ -68,3 +68,6 @@ const About=()=>{
     </section>
   )}
 export default About
+
+
+
