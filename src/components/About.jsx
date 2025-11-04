@@ -1,73 +1,157 @@
-import React from 'react'
-import '../styles/About.css'
+import React, { useEffect, useRef } from 'react';
+import { motion, useAnimation, useInView } from 'framer-motion';
+import '../styles/About.css';
 
-const About=()=>{
-  return( 
+const About = () => {
+  const controls = useAnimation();
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.3 });
+
+  useEffect(() => {
+    if (isInView) {
+      controls.start('visible');
+    }
+  }, [controls, isInView]);
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.3
+      }
+    }
+  };
+
+const itemVariants = {
+  hidden: { y: 30, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.8,
+      ease: "easeOut"  // Changed from the invalid cubic-bezier value
+    }
+  }
+};
+
+  const stats = [
+    { number: '7+', label: 'Days of Learning' },
+    { number: '10+', label: 'Workshops' },
+    { number: '5+', label: 'Speakers' },
+    { number: '500+', label: 'Participants' }
+  ];
+
+  return (
     <section className="about-section" id="about">
       <div className="about-container">
-        <div className="about-card">
+        <motion.div 
+          className="about-card"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+        >
           <div className="about-grid">
-            <div className="about-content">
-              <h2 className="about-title">
-                About Open<br />Source Week
-              </h2>
-              <div className="about-block">
+            <motion.div 
+              className="about-content"
+              variants={containerVariants}
+              initial="hidden"
+              animate={controls}
+              ref={ref}
+            >
+              <motion.div variants={itemVariants}>
+                <span className="section-tag">About The Event</span>
+                <h2 className="about-title">
+                  Open Source <span className="gradient-text">Week</span>
+                </h2>
+              </motion.div>
+              
+              <motion.div className="about-block" variants={itemVariants}>
                 <p className="about-description">
-                  Open Source Week is a one-week celebration of collaboration, learning, and innovation. It brings together developers, designers, and enthusiasts through engaging workshops, inspiring speaker sessions, and hands-on projects — all aimed at empowering participants to explore, contribute to, and grow within the world of open source development.
+                  Open Source Week is a one-week celebration of collaboration, learning, and innovation. Join us for an immersive experience featuring hands-on workshops, inspiring talks from industry leaders, and opportunities to contribute to real open-source projects.
                 </p>
-                <div className="about-features">
-                  <div className="feature-item">
-                    <div className="feature-icon">
-                      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
-                      </svg>
-                    </div>
-                    <p className="feature-label">Workshops</p>
+                
+                <div className="stats-grid">
+                  {stats.map((stat, index) => (
+                    <motion.div 
+                      key={index} 
+                      className="stat-item"
+                      whileHover={{ y: -5, scale: 1.03 }}
+                      transition={{ type: 'spring', stiffness: 300 }}
+                    >
+                      <div className="stat-number">{stat.number}</div>
+                      <div className="stat-label">{stat.label}</div>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.div>
+            </motion.div>
+
+            <motion.div 
+              className="about-visual"
+              initial={{ opacity: 0, x: 50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+            >
+              <div className="code-window">
+                <div className="window-header">
+                  <div className="window-buttons">
+                    <span className="red"></span>
+                    <span className="yellow"></span>
+                    <span className="green"></span>
                   </div>
-                  <div className="feature-item">
-                    <div className="feature-icon">
-                      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-                      </svg>
-                    </div>
-                    <p className="feature-label">Talks</p>
-                  </div>
-                  <div className="feature-item">
-                    <div className="feature-icon">
-                      <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                        <circle cx="9" cy="7" r="4" />
-                        <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-                        <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                      </svg>
-                    </div>
-                    <p className="feature-label">Networking</p>
-                  </div>
+                  <div className="window-title">open_source_week.py</div>
+                </div>
+                <div className="code-content">
+                  <pre><code>
+{`def main():
+    # Welcome to Open Source Week 2025!
+    print("🚀 Join us for an amazing week of")
+    print("   learning, collaboration, and")
+    print("   open-source contribution!")
+    
+    # Event Highlights
+    workshops = [
+        "Git & GitHub for Beginners",
+        "Your First Open Source PR",
+        "Building with Open Source"
+    ]
+    
+    print("\\n🎯 Highlights:")
+    for workshop in workshops:
+        print(f"   • {workshop}")
+    
+    print("\\n📅 Save the date: Coming Soon!")
+    print("🌐 Visit our website for updates!")
+
+if __name__ == "__main__":
+    main()`}
+                  </code></pre>
                 </div>
               </div>
-            </div>
-            <div className="about-images">
-              <div className="image-collage">
-                <div className="collage-item collage-1">
-                  <img src="/hero_image.jpeg" alt="image1" />
-                </div>
-                <div className="collage-item collage-2">
-                  <img src="/hero_image.jpeg" alt="image2" />
-                </div>
-                <div className="collage-item collage-3">
-                  <img src="/hero_image.jpeg" alt="image3" />
-                </div>
-                <div className="collage-item collage-4">
-                  <img src="/hero_image.jpeg" alt="image4" />
-                </div>
-              </div>
-            </div>
+            </motion.div>
           </div>
-        </div>
+          
+          <motion.div 
+            className="cta-section"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8, delay: 0.6 }}
+          >
+            <p className="cta-text">Ready to be part of something amazing?</p>
+            <div className="cta-buttons">
+              <button className="btn btn-primary">Register Now</button>
+              <button className="btn btn-outline">Learn More</button>
+            </div>
+          </motion.div>
+        </motion.div>
       </div>
     </section>
-  )}
-export default About
+  );
+};
 
-
-
+export default About;
