@@ -24,11 +24,7 @@ function App() {
   <Timeline />
   <FAQ />
 
-  <footer className="footer">
-    <div className="footer-container">
-      <p className="footer-text">This is the footer.</p>
-    </div>
-  </footer>
+  <Footer />
 </main>
 
     </div>
