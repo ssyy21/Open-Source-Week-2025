@@ -3,12 +3,12 @@ import React from 'react';
 import Hero from './components/Hero';
 import About from './components/About';
 import Themes from './components/Themes';
-import Prizes from './components/Prizes';
-import './App.css';
-import Footer from "./components/Footer";
 import Timeline from "./components/Timeline";
 import Speakers from "./components/Speakers";
+import Prizes from './components/Prizes';
 import FAQ from "./components/FAQ";
+import Footer from "./components/Footer";
+import './App.css';
 
 function App() {
   return (
@@ -17,18 +17,16 @@ function App() {
       <Hero />
       <About />
       <Themes />
-
-<main>
-  <Prizes />
-  <Speakers />
-  <Timeline />
-  <FAQ />
-
-  <Footer />
-</main>
-
+      <Timeline />
+      <Speakers />
+      <Prizes />
+      <FAQ />
+      <Footer />
     </div>
   );
 }
 
 export default App;
+
+
+
