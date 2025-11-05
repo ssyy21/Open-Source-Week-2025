@@ -3,6 +3,7 @@ import '../styles/Hero.css';
 
 const Hero = () => {
   useEffect(() => {
+     window.scrollTo(0, 0);
     // bin rain
     const binaryRain = document.querySelector('.binary-rain');
     if (binaryRain) {
@@ -33,16 +34,16 @@ const Hero = () => {
           <h1 className="hero-title">
             OPEN SOURCE<br />WEEK
           </h1>
-          
+
           <div className="hero-tagline">
             <div className='hero-tagline-1'>
             <span>DISCOVER</span>
             </div>
-            <span className="dot">•</span>
+            {/* <span className="dot"></span> */}
             <div className='hero-tagline-2'>
             <span>DEVELOP</span> 
             </div>
-            <span className="dot">•</span>
+            {/* <span className="dot"></span> */}
             <div className='hero-tagline-3'>
             <span>DELIVER</span>
             </div>
@@ -51,12 +52,14 @@ const Hero = () => {
           <button className="register-button">
             REGISTER NOW
           </button>
-
+          
+<div className="hero-description-box">
           <p className="hero-description">
             <strong>OPEN SOURCE WEEK</strong> – Where Ideas Ignite and Innovation Thrives.<br />
             A platform that empowers women to address real-life challenges<br />
             head-on and showcase their creativity and ingenuity.
           </p>
+</div>
         </div>
 
         <div className="hero-visual">
