@@ -5,23 +5,23 @@ const Themes=()=>{
   const themeData=[
     {
       title: 'FinTech',
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at luctus ex mauris, accumsan pharetra metus sed facilisis. Donec blandit id lorem aliquam feugiat. Maecenas metus sed facilisis blandit. Donec ipsum dapibus nunc.",
+      description: "Open-source solutions are transforming the financial world — from secure transactions to digital wallets and smart budgeting tools. Contribute to projects that make finance more transparent, efficient, and inclusive for all users worldwide.",
     },
     {
       title: 'Healthcare',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at luctus ex mauris, accumsan pharetra metus sed facilisis. Donec blandit id lorem aliquam feugiat. Maecenas metus sed facilisis blandit. Donec ipsum dapibus nunc.',
+      description: 'Technology-driven health innovation saves lives. Work on open-source platforms that enhance medical accessibility, patient data privacy, telemedicine, and AI-based diagnostics to create a healthier and more connected world.',
     },
     {
       title: 'AR/VR',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at luctus ex mauris, accumsan pharetra metus sed facilisis. Donec blandit id lorem aliquam feugiat. Maecenas metus sed facilisis blandit. Donec ipsum dapibus nunc.',
+      description: 'Step into the future of immersive experiences! Develop open-source AR/VR applications that empower education, gaming, and real-world simulations, making technology more interactive, engaging, and inclusive for everyone.',
     },
     {
       title: 'AI',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at luctus ex mauris, accumsan pharetra metus sed facilisis. Donec blandit id lorem aliquam feugiat. Maecenas metus sed facilisis blandit. Donec ipsum dapibus nunc.',
+      description: 'Artificial Intelligence lies at the heart of innovation. Build models, frameworks, and open datasets that help solve real-world challenges — from automation and language models to sustainability and social good applications.',
     },
     {
       title: 'Open Innovation',
-      description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at luctus ex mauris, accumsan pharetra metus sed facilisis. Donec blandit id lorem aliquam feugiat. Maecenas metus sed facilisis blandit. Donec ipsum dapibus nunc.',
+      description: 'Collaborate, experiment, and reimagine technology through open-source collaboration. Build solutions that merge creativity and impact — bridging communities, ideas, and technology to foster inclusive global development.',
     },
   ];
   return(
