@@ -1,0 +1,93 @@
+/* === NAVBAR STYLING === */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 65px;
+  background: rgba(3, 0, 20, 0.15);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  border-bottom: 1px solid rgba(112, 66, 248, 0.38); /* same color as navbar border */
+  box-shadow: 0 2px 12px rgba(112, 66, 248, 0.25); /* soft violet glow */
+  z-index: 1000;
+  
+}
+
+/* Left side: logo */
+.navbar-logo img {
+  height: 55px;
+  width: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* Middle: navigation links */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  border: 1px solid rgba(112, 66, 248, 0.38);
+  border-radius: 40px;
+  background: rgba(3, 0, 20, 0.4);
+  padding: 10px 30px;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  color: #ccc;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #a855f7;
+}
+
+/* Active link style */
+.navbar-links .active {
+  color: #a855f7;
+}
+
+/* Right side: social icons */
+.navbar-socials {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar-socials a {
+  color: white;
+  font-size: 1.3rem;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.navbar-socials a:hover {
+  color: #a855f7;
+  transform: scale(1.1);
+}
+
+/* === Mobile Menu === */
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-links {
+    display: none;
+  }
+
+  .navbar-socials {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
