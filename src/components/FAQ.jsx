@@ -4,28 +4,33 @@ import '../styles/FAQ.css';
 const faqData = [
   {
     id: 1,
-    question: 'Is it free to participate in this hackathon?',
-    answer: 'Yes, you can register and participate for free.'
+    question: 'What is Open Source Week?',
+    answer:
+      'Open Source Week is a week-long celebration of collaboration, innovation, and community-driven development. It includes workshops, talks, and coding events focused on open-source technologies.',
   },
   {
     id: 2,
-    question: 'What is the eligibility criteria for participation?',
-    answer: 'The hackathon is open to students from all universities and colleges. See the official guidelines for details.'
+    question: 'Who can participate in Open Source Week?',
+    answer:
+      'Anyone with an interest in technology, coding, or community contribution can participate! Whether you are a beginner or an experienced developer, all are welcome.',
   },
   {
     id: 3,
-    question: 'Can students from other colleges participate?',
-    answer: 'Absolutely! We encourage participation from students across different colleges and institutions.'
+    question: 'Do I need prior open-source experience to join?',
+    answer:
+      'Not at all! Open Source Week is beginner-friendly. You’ll have mentors, community members, and sessions to help you learn how to contribute to open source.',
   },
   {
     id: 4,
-    question: 'Are non-IGDTUW students allowed to attend on-campus events?',
-    answer: 'Please check the event specific guidelines for non-IGDTUW student access, as some events may be restricted.'
+    question: 'Is there any registration fee?',
+    answer:
+      'No, participation in Open Source Week is completely free. Just register on the official platform to secure your spot.',
   },
   {
     id: 5,
-    question: 'Can we form inter-college teams?',
-    answer: 'Yes, inter-college teams are permitted and encouraged for a diverse and collaborative experience.'
+    question: 'Will I get certificates or goodies?',
+    answer:
+      'Yes! All active participants will receive certificates of participation, and top contributors or winners may receive exclusive swags or goodies.',
   },
 ];
 
@@ -47,10 +52,11 @@ const FAQ = () => {
               onClick={() => handleToggle(item.id)}
             >
               <p className="faq-question">{item.question}</p>
-              <span className="faq-icon">{openItemId === item.id ? '▲' : '▼'}</span>
+              <span className={`faq-icon ${openItemId === item.id ? 'rotate' : ''}`}>
+                ▼
+              </span>
             </div>
 
-            {/* The animated answer container */}
             <div
               className={`faq-answer-wrapper ${
                 openItemId === item.id ? 'open' : ''
