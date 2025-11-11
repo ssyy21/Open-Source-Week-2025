@@ -17,9 +17,9 @@ const Prizes = () => {
               />
             </div>
             <div className="details">
-              <h3 className="amount">INR XXXX</h3>
-              <p className="position">First Place</p>
-              <p className="desc">Cash Prize for 1st position</p>
+              {/* <h3 className="amount">INR XXXX</h3> */}
+              <h3 className="amount">🥇1st Prize</h3>
+              <p className="desc">Cash Prize + Medal + IEEE Goodies + Annual IEEE Membership</p>
             </div>
           </div>
           <div className="card silver">
@@ -31,9 +31,9 @@ const Prizes = () => {
               />
             </div>
             <div className="details">
-              <h3 className="amount">INR XXXX</h3>
-              <p className="position">First Runner Up</p>
-              <p className="desc">Cash Prize for 2nd position</p>
+              {/* <h3 className="amount">INR XXXX</h3> */}
+              <h3 className="amount">🥈2nd Prize</h3>
+              <p className="desc">Cash Prize + Medal + IEEE Goodies + Annual IEEE Membership</p>
             </div>
           </div>
           <div className="card bronze">
@@ -45,9 +45,9 @@ const Prizes = () => {
               />
             </div>
             <div className="details">
-              <h3 className="amount">INR XXXX</h3>
-              <p className="position">Second Runner Up</p>
-              <p className="desc">Cash Prize for 3rd position</p>
+              {/* <h3 className="amount">INR XXXX</h3> */}
+              <h3 className="amount">🥉 3rd Prize</h3>
+              <p className="desc">Cash Prize + Medal + IEEE Goodies + Annual IEEE Membership</p>
             </div>
           </div>
         </div>
