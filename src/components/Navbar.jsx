@@ -2,9 +2,8 @@ import '../styles/Navbar.css';
 import React, { useState, useEffect } from "react";
 import { FaLinkedin, FaInstagram, FaBars, FaEnvelope, FaTimes, FaDiscord } from "react-icons/fa";
 import { SiX } from "react-icons/si";
-import { Events, scrollSpy, scroller } from "react-scroll";
+import { Events, scrollSpy } from "react-scroll";
 
-const iconSize = 24;
 
 const handleEmailClick = (e) => {
   e.preventDefault();
