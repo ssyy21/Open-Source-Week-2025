@@ -289,56 +289,131 @@
   border-color: rgba(255, 255, 255, 0.3);
 }
 
-/* Responsive Design */
-@media (max-width: 1200px) {
-  .about-grid {
-    gap: 40px;
-  }
-  
-  .about-title {
-    font-size: 3rem;
-  }
-}
-
+/* === FINAL RESPONSIVE FIX === */
 @media (max-width: 992px) {
   .about-grid {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column; /* ✅ Stack vertically */
+    align-items: center;
+    gap: 2.5rem;
+    text-align: center;
   }
-  
-  .about-card {
-    padding: 40px;
+
+  .about-content {
+    order: 1; /* ✅ Always on top */
+    width: 100%;
   }
-  
+
   .about-visual {
-    margin-top: 40px;
+    order: 2; /* ✅ Always below text */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .code-window {
+    width: 90%;
+    max-width: 480px;
+    transform: scale(0.95);
+    margin: 0 auto;
+  }
+
+  .about-card {
+    padding: 40px 25px;
+  }
+
+  .about-title {
+    font-size: 2.6rem;
+  }
+
+  .about-description {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    justify-items: center;
+  }
+
+  .cta-section {
+    margin-top: 2.5rem;
+    padding-top: 2rem;
   }
 }
 
 @media (max-width: 768px) {
   .about-section {
-    padding: 80px 20px;
+    padding: 60px 15px;
   }
-  
+
   .about-card {
     padding: 30px 20px;
   }
-  
+
   .about-title {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
   }
-  
+
+  .about-description {
+    font-size: 1rem;
+  }
+
   .stats-grid {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
-  
+
+  .code-window {
+    width: 100%;
+    max-width: 380px;
+    transform: scale(0.9);
+  }
+
   .cta-buttons {
     flex-direction: column;
+    gap: 12px;
   }
-  
+
   .btn {
     width: 100%;
   }
 }
+
+@media (max-width: 480px) {
+  .about-card {
+    padding: 25px 15px;
+  }
+
+  .about-title {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  .about-description {
+    font-size: 0.95rem;
+  }
+
+  .stat-item {
+    padding: 15px;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  .code-window {
+    max-width: 320px;
+    transform: scale(0.85);
+  }
+
+  .cta-text {
+    font-size: 1.1rem;
+  }
+}
+
 
 /* Animations */
 @keyframes float {
