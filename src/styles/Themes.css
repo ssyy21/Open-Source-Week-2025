@@ -8,9 +8,10 @@
 }
 
 .wrapper {
-  max-width: 1400px;
+  max-width: 1200px;          /* keep within a centered width */
+  margin: 0 auto;             /* ✅ center the entire section horizontally */
+  text-align: center;         /* ensures heading aligns nicely */
 }
-
 .title {
   font-size: 3.5rem;
   font-weight: 700;
@@ -25,6 +26,10 @@
 .timeline-container {
   position: relative;
   width: 100%;
+  display: flex;              /* ✅ centers timeline + grid */
+  flex-direction: column;
+  align-items: center;        /* ✅ center horizontally */
+  justify-content: center;
 }
 
 .timeline {
@@ -34,13 +39,14 @@
   margin-bottom: 40px;
 }
 
+/* Keep the line centered */
 .line {
   position: absolute;
   top: 50%;
-  left: 8%;
-  right: 8%;
+  left: 10%;                  /* ✅ make consistent spacing on both sides */
+  right: 10%;
   height: 4px;
-  background: linear-gradient(90deg, #9e66ff 0%, #160081 25%, #9e66ff 50%, #160081 75%, #9e66ff 100%);
+  background: linear-gradient(90deg, #9e66ff 0%, #160081 50%, #9e66ff 100%);
   transform: translateY(-50%);
   border-radius: 2px;
 }
@@ -58,12 +64,16 @@
 
 .themes-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 0;
-  position: relative;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;                  /* ✅ add breathing room between boxes */
+  justify-items: center;      /* ✅ ensures all boxes are centered in grid cells */
+  align-items: start;
+  margin-top: 40px;
+  width: 100%;
+  max-width: 1100px;          /* ✅ keeps grid centered under title */
 }
 
-.themes-grid::before {
+/* .themes-grid::before {
   content: '';
   position: absolute;
   top: 0;
@@ -81,37 +91,26 @@
   bottom: 0;
   width: 1px;
   background: rgba(158, 102, 255, 0.3);
-}
+} */
 
 .theme-item {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 12px;
   padding: 30px 20px;
-  position: relative;
   text-align: center;
   transition: all 0.3s ease;
+  display: flex;                  /* ✅ Use flexbox to align content */
+  flex-direction: column;         /* ✅ Stack title, desc, and button vertically */
+  justify-content: space-between; /* ✅ Push button to the bottom */
+  height: 100%;                   /* ensures consistent height */
+  min-height: 400px;              /* ✅ adjust based on your content */
+  max-width: 250px;
+  margin: 0 auto;
 }
 
-.theme-item:not(:last-child)::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 1px;
-  background: rgba(158, 102, 255, 0.3);
-}
-
-.theme-item:hover {
-  background: rgba(158, 102, 255, 0.05);
-}
-
-.theme-title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: #fff;
-  margin-bottom: 15px;
-}
-
+/* Optional: keep text spacing consistent */
 .theme-desc {
+  flex-grow: 1;                   /* ✅ allows text area to expand naturally */
   color: #94A3B8;
   font-size: 0.85rem;
   line-height: 1.6;
@@ -119,7 +118,9 @@
   text-align: left;
 }
 
+
 .theme-btn {
+  align-self: center;             /* ✅ ensures button stays centered horizontally */
   background: linear-gradient(135deg, #7C3AED 0%, #9e66ff 100%);
   border: none;
   padding: 10px 24px;
@@ -136,6 +137,62 @@
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(158, 102, 255, 0.5);
 }
+
+/* .theme-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 1px;
+  background: rgba(158, 102, 255, 0.3);
+} */
+
+
+.theme-item:hover {
+  background: rgba(158, 102, 255, 0.08);
+  transform: translateY(-5px);
+}
+
+.themes-grid-container {
+  display: flex;
+  justify-content: center;   /* ✅ ensures full grid is centered */
+  width: 100%;
+}
+
+
+.theme-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+/* .theme-desc {
+  color: #94A3B8;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: left;
+} */
+
+/* .theme-btn {
+  background: linear-gradient(135deg, #7C3AED 0%, #9e66ff 100%);
+  border: none;
+  padding: 10px 24px;
+  border-radius: 20px;
+  color: white;
+  font-weight: 600;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(124, 58, 237, 0.3);
+} */
+
+/* .theme-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(158, 102, 255, 0.5);
+} */
 
 @media (max-width: 1200px) {
   .themes-grid {
