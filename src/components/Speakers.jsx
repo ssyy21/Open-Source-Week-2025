@@ -7,14 +7,24 @@ const speakers = [
     id: 1,
     name: "Paras Atal",
     image: "/speaker1.jpeg",
-    designation: "SDE at BNY",
+    designation: "SDE at BNY, Samsung AI Intern, Creator with 150k+ followers",
     description:
       "Paras Atal is a Software Engineer at BNY Mellon and a tech creator with 150K+ followers, passionate about helping students break into tech. He has worked at Samsung R&D and Hyperverge AI, contributing to impactful AI projects like SkySweeper. Paras actively mentors students on career growth, AI, and personal branding, building impact through code, content, and community.",
     linkedin: "https://www.linkedin.com/in/parasatal/",
     instagram: "https://www.instagram.com/i.amparas/?hl=en",
   },
-  {
+   {
     id: 2,
+    name: "Anubha Maneshwar",
+    image: "/speaker4.jpeg",
+    designation: "Founder GirlScript Foundation and Web3Conf India, Forbes Asia U30, Web3.0 Optimist",
+    description:
+      "Anubha is a young entrepreneur and the Founding Director of GirlScript Foundation, empowering over 1,000,000 learners with tech and employability skills. Featured in Forbes Asia 30 Under 30, she has spoken at global platforms like TEDx and Microsoft Build, championing accessible education for all.",
+    linkedin: "https://www.linkedin.com/in/anubhamane/",
+    instagram: "https://www.instagram.com/anubha_mane?igsh=MWwzYTVwcXl6a2J2ZA%3D%3D",
+  },
+  {
+    id: 3,
     name: "Vivek Gupta",
     image: "/speaker2.jpeg",
     designation: "Founder of AlgoZenith , ICPC World Finalist",
@@ -24,14 +34,14 @@ const speakers = [
     instagram: "https://www.instagram.com/vivekgupta.ai?igsh=eTUyaDZlNXBjaGxi",
   },
   {
-    id: 3,
+    id: 4,
     name: "Nitish Rai",
     image: "/speaker3.jpeg",
     designation: "Software Engineer at Google US, Co-founder of AlgoZenith, ICPC World Finalist",
     description:
       "Nitish Rai is a Software Engineer at Google (US) and Co-founder of AlgoZenith. An ICPC World Finalist, he is passionate about algorithms, problem-solving, and building scalable systems. Through AlgoZenith, he aims to make high-quality coding education accessible, empowering thousands of students to excel in competitive programming and secure top tech roles.",
     linkedin: "https://www.linkedin.com/in/ananya-mehta/",
-    instagram: "https://www.instagram.com/",
+    instagram: "https://www.instagram.com/algozenith/",
   },
   // {
   //   id: 4,
