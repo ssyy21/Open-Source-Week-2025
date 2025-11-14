@@ -23,6 +23,17 @@ const speakers = [
     linkedin: "https://www.linkedin.com/in/anubhamane/",
     instagram: "https://www.instagram.com/anubha_mane?igsh=MWwzYTVwcXl6a2J2ZA%3D%3D",
   },
+    {
+    id: 4,
+    name: "Megha Gupta",
+    image: "/speaker5.jpeg",
+    designation: "Youth Wellbeing Expert & Mental Health Programme Specialist",
+    description:
+      "Megha Gupta is a Youth Wellbeing Expert with extensive experience in mental health program development, counselling, and crisis intervention. She has worked with NGOs, government bodies, and international organizations like the UNDP. Her approach is person-centred and trauma-informed, focusing on emotional regulation and community wellbeing.",
+    linkedin: "https://www.linkedin.com/in/meghagupta-psych?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    instagram: "https://www.instagram.com/rightsidestory/?hl=en",
+  },
+
   {
     id: 3,
     name: "Vivek Gupta",
@@ -43,16 +54,7 @@ const speakers = [
     linkedin: "https://www.linkedin.com/in/ananya-mehta/",
     instagram: "https://www.instagram.com/algozenith/",
   },
-  // {
-  //   id: 4,
-  //   name: "Arjun Malhotra",
-  //   image: "/speaker4.jpg",
-  //   designation: "Blockchain Developer, Polygon",
-  //   description:
-  //     "Arjun Malhotra is a blockchain engineer at Polygon, contributing to smart contract development and decentralized finance ecosystems.",
-  //   linkedin: "https://www.linkedin.com/in/arjun-malhotra/",
-  //   instagram: "https://www.instagram.com/arjun.malhotra/",
-  // },
+
   // {
   //   id: 5,
   //   name: "Priya Nair",

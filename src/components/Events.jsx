@@ -21,6 +21,15 @@ const events = [
     venue: "Webex Meet",
     desc: "Discover how open-source collaboration drives real-world impact with insights from GirlScript and Dev Guild.",
   },
+    {
+    id: 4,
+    image: "/poster3.jpg",
+    title: "Professional Development Workshop",
+    date: "13 November 2025",
+    time: "1:00 PM",
+    venue: "Seminar Hall, IGDTUW",
+    desc: "Be a part of an insightful session on mental wellbeing and personal growth with youth wellbeing expert Megha Gupta.",
+  },
   {
     id: 3,
     image: "/poster4.jpg",
@@ -39,15 +48,7 @@ const events = [
     venue: "Auditorium, IGDTUW",
     desc: "Join us for a candid panel discussion and Q&A as Nitish shares his journey from ICPC World Finalist to Google Engineer, along with insights on growth, learning, and life in tech.",
   },
-  // {
-  //   id: 4,
-  //   image: "/event4.jpg",
-  //   title: "Breaking Barriers: Empowering Women in Tech",
-  //   date: "1st February 2025",
-  //   time: "11:00 AM - 12:30 PM",
-  //   venue: "Seminar Hall, IGDTUW",
-  //   desc: "A discussion panel featuring women leaders sharing their journeys in technology, innovation, and leadership.",
-  // },
+
   // {
   //   id: 5,
   //   image: "/event5.jpg",

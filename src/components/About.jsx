@@ -144,7 +144,7 @@ if __name__ == "__main__":
           >
             <p className="cta-text">Ready to be part of something amazing?</p>
             <div className="cta-buttons">
-              <button className="btn btn-primary">Register Now</button>
+              <a href="https://unstop.com/o/3sqTRrD?lb=KPDZLkuz&utm_medium=Share&utm_source=ieeeigd63887&utm_campaign=Competitions"><button className="btn btn-primary">Register Now</button></a>
               <button className="btn btn-outline">Learn More</button>
             </div>
           </motion.div>

@@ -49,9 +49,9 @@ const Hero = () => {
             </div>
           </div>
 
-          <button className="register-button">
+          <a href="https://unstop.com/o/3sqTRrD?lb=KPDZLkuz&utm_medium=Share&utm_source=ieeeigd63887&utm_campaign=Competitions"><button className="register-button">
             REGISTER NOW
-          </button>
+          </button></a>
           
 <div className="hero-description-box">
           <p className="hero-description">
