@@ -9,7 +9,7 @@ const timelineData = [
         title: 'Registration Opens',
         details: 'Register yourself through unstop and join the discord channel.',
         actions: [
-            { label: 'Register', type: 'primary' },
+            { label: 'Register', type: 'primary' , link: 'https://unstop.com/o/3sqTRrD?lb=KPDZLkuz&utm_medium=Share&utm_source=ieeeigd63887&utm_campaign=Competitions'},
             { label: 'Join Discord', type: 'secondary' , link: 'https://discord.gg/XSHzpr29gD'}
         ]
     },
